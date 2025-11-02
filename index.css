@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: #546954;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    position: fixed;
+    direction: rtl;
+    padding: 10px 40px;
+}
+.logo a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: 0.3s;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    
+}
+.logo a:hover{
+    color: antiquewhite;
+}
+.navigation a{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+    transition: 0.3s;
+}
+.navigation a:hover{
+    color: beige;
+}
+.main{
+    background-color: antiquewhite;
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.main-section h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#546954;
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
+.main-section h1:hover{
+    color: #475847;
+}
+.main-section p {
+  font-size: 11px;
+  color: #444;
+  margin-bottom: 40px; /* مسافة بين النص والبطاقة */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 1px 35px;
+}
+.card {
+  width: 320px;
+  height: 520px;
+  background:#fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow:hidden;
+  text-align: center;
+  transition: 0.3s ease;
+  margin-bottom: 40px;
+}
+.card-container{
+  display: flex;
+  flex-wrap:wrap; /* يخليها تنزل سطر جديد لو ضاقت الشاشة */
+  justify-content:center; /* يوسّط البطاقات أفقياً */
+  align-items: flex-start;
+  gap: 40px; /* المسافة بين البطاقات */
+  padding: 10px;
+}
+
+.card-content img{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    padding: 10px;
+    
+}
+.card:hover{
+    transform: scale(1.1) ;
+    
+}
+.card-content h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.card-content h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #475847;
+    margin: 0px;
+}
+.card-content p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.5em;
+    font-weight: 300;
+    color: gray;
+    padding: 10px 10px;
+}
+.card-content button{
+    border: 0px black solid;
+    border-radius: 4px;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+    background-color: #475847;
+    font-size: 0.8em;
+    color: #fff;
+    transition: 0.3s ease;
+}
+.card-content button:hover{
+    background-color:#546954 ;
+    transform: scale(1.1);
+}
+footer {
+  background-color: #546954;
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-family: 'Rubik', sans-serif;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9em;
+  transition: 0.3s;
+}
+
+footer .footer-links a:hover {
+  color: antiquewhite;
+}
+
+footer .social-icons img {
+  width: 25px;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
+}
+footer .email-link {
+  color: #f5f5dc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+footer .email-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #546954;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 10px 0;
+  }
+
+  .navigation a {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+}
